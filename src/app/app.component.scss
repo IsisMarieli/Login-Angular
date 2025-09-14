@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  height: 100vh;
+
+  .left-side{
+    flex: 1;
+  }
+  .right-side{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 39px;
+    background-image: url(../../public/UVST-Wallpaper.svg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center;
+  }
+
+  h1{
+    color: white;
+    font-weight: 400;
+    font-size: 45px;
+  }
+
+  a{
+    width: 420px;
+  }
+}
