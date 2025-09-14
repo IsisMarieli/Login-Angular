@@ -2,10 +2,51 @@
   display: flex;
   height: 100vh;
 
-  .left-side{
+  .left-side {
+    display: flex;
+    align-items: center;
+    gap: 71px;
+    flex-direction: column;
     flex: 1;
+    background-color: #DA5572;
+    padding: 10px;
+
+    img {
+      max-width: 200px;
+      height: 87.92px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      width: 100%;
+      max-width: 75%;
+
+      .wrapper-field {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        label {
+          color: white;
+          font-size: 13px;
+        }
+      }
+
+      button {
+        padding: 17px;
+        background-color: #FF0040;
+        border: none;
+        color: white;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+    }
+
   }
-  .right-side{
+
+  .right-side {
     flex: 2;
     display: flex;
     align-items: center;
@@ -13,18 +54,18 @@
     flex-direction: column;
     gap: 39px;
     background-image: url(../../public/UVST-Wallpaper.svg);
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
   }
 
-  h1{
+  h1 {
     color: white;
     font-weight: 400;
     font-size: 45px;
   }
 
-  a{
+  a {
     width: 420px;
   }
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: '[link-button]',
+  selector: 'a[link-button]',
   imports: [],
   template: '<ng-content/>',
   styleUrl: './link-button.component.scss'
