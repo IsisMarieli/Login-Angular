@@ -5,6 +5,7 @@
   .left-side {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 71px;
     flex-direction: column;
     flex: 1;
@@ -23,6 +24,14 @@
       width: 100%;
       max-width: 75%;
 
+      input{
+        &:focus {
+          outline: none;
+          border: 1px solid rgb(255, 247, 0);
+        }
+
+      }
+
       .wrapper-field {
         display: flex;
         flex-direction: column;
@@ -31,6 +40,11 @@
         label {
           color: white;
           font-size: 13px;
+        }
+
+        .error-message-container{
+          color: rgb(255, 247, 0);
+          font-size: 12px;
         }
       }
 
@@ -62,10 +76,34 @@
   h1 {
     color: white;
     font-weight: 400;
-    font-size: 45px;
+    font-size: 2rem;
   }
 
   a {
     width: 420px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  :host{
+    display: flex;
+    flex-direction: column;
+    .left-side{
+      padding: 30px;
+    }
+
+    .right-side{
+
+      h1{
+        font-size: 1.5rem;
+      }
+
+      a{
+        font-size: 0.8rem;
+        max-width: 300px;
+        height: auto;
+      }
+    }
   }
 }

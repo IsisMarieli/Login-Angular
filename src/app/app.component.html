@@ -1,26 +1,37 @@
 <div class="left-side">
   <img src="/corazon.svg" alt="logo corazon">
-  <form>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
     <div class="wrapper-field">
-      <label for="email">Correo electrónico o Nombre de usuario</label>
-      <input custon-input id="email" type="email">
+      <label for="email">Correo electrónico</label>
+      <input formControlName="emailField" custon-input id="email" type="email">
+
+      <div *ngIf="form.get('emailField')?.touched" class="error-message-container">
+        <span *ngIf="form.get('emailField')?.hasError('email')">Ingresa un correo válido.</span>
+        <span *ngIf="form.get('emailField')?.hasError('required')">Campo obligatorio.</span>
+      </div>
     </div>
 
     <div class="wrapper-field">
       <label for="password">Contraseña</label>
-      <input custon-input id="password" type="password">
+      <input formControlName="passwordField" custon-input id="password" type="password">
+
+      <div *ngIf="form.get('passwordField')?.touched" class="error-message-container">
+        <span *ngIf="form.get('passwordField')?.hasError('password')">Ingresa una contraseña válida.</span>
+        <span *ngIf="form.get('passwordField')?.hasError('required')">Campo obligatorio.</span>
+      </div>
     </div>
 
     <button>
-      Sign in
+      Entrar
     </button>
 
   </form>
 </div>
 
 <div class="right-side">
-  <h1>Bienvenido a <em>Un Verano Sin Ti</em></h1>
-  <a href="" link-button>Escucha ahora el álbum UVST 2022</a>
+  <h1>Bienvenidos a <em>Un Verano Sin Ti</em></h1>
+  <a href="https://open.spotify.com/intl-pt/album/3RQQmkQEvNCY4prGKE6oc5" target="_blank" link-button>Escucha ahora el álbum UVST 2022</a>
 
 </div>
 <router-outlet />
